@@ -22,13 +22,13 @@ body {
     
 }
 
-.footer {
+/* .footer {
     background-color: var(--background);
     margin-top: auto;
     padding: 0.3em;
     text-align: center;
     color: var(--main-white);
-}
+} */
 
 .top-nav {
     background: linear-gradient(to right, var(--bar-left), var(--bar-right));
@@ -54,4 +54,22 @@ body {
     color: var(--main-white);
     border: none;
     font-size: 20px;
+}
+
+.sec-nav {
+    display: flex;
+}
+
+.sec-btn-groups {
+    display: flex;
+    margin: 2em 2em 2em auto;
+    gap: 3em;
+}
+
+.sec-nav button {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-blue);
+    background: none;
+    border: none;
 }

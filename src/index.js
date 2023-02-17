@@ -30,3 +30,42 @@ top_nav_button_groups.appendChild(btn_contact);
 top_nav.appendChild(top_nav_button_groups);
 // add the nav bar to the main content
 content.appendChild(top_nav);
+
+const sec_nav = document.createElement('div');
+sec_nav.classList.add('sec-nav');
+
+// right nav buttons
+const sec_nav_button_groups = document.createElement('div');
+sec_nav_button_groups.classList.add('sec-btn-groups');
+// button projects
+const btn_projects = document.createElement('button');
+btn_projects.textContent = 'Data Projects';
+sec_nav_button_groups.appendChild(btn_projects);
+// button web
+const btn_webdev = document.createElement('button');
+btn_webdev.textContent = 'Web Dev';
+sec_nav_button_groups.appendChild(btn_webdev);
+// button hardware
+const btn_hardware = document.createElement('button');
+btn_hardware.textContent = 'Hardware Dev';
+sec_nav_button_groups.appendChild(btn_hardware);
+// button publication
+const btn_publication = document.createElement('button');
+btn_publication.textContent = 'Publications';
+sec_nav_button_groups.appendChild(btn_publication);
+// button Misc.
+const btn_misc = document.createElement('button');
+btn_misc.textContent = 'Misc.';
+sec_nav_button_groups.appendChild(btn_misc);
+
+sec_nav.appendChild(sec_nav_button_groups);
+// add the nav bar to the main content
+content.appendChild(sec_nav);
+
+// add a main content
+const main_content = document.createElement('div');
+main_content.classList.add('main-content');  // will be set as flex box
+
+const left_content = document.createElement('div');
+main_content.appendChild(left_content);
+
