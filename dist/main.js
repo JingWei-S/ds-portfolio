@@ -1,1 +1,1 @@
-console.log("test");
+(()=>{const t=document.querySelector(".content"),e=document.createElement("div");e.classList.add("top-nav"),t.appendChild(e);const n=document.createElement("p");n.textContent="Jinggg",e.appendChild(n);const o=document.createElement("div");o.classList.add("top-btn-groups");const d=document.createElement("button");d.textContent="Home",o.appendChild(d);const c=document.createElement("button");c.textContent="About",o.appendChild(c);const a=document.createElement("button");a.textContent="Contact",o.appendChild(a),e.appendChild(o),t.appendChild(e)})();
