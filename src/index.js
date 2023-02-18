@@ -67,5 +67,26 @@ const main_content = document.createElement('div');
 main_content.classList.add('main-content');  // will be set as flex box
 
 const left_content = document.createElement('div');
+left_content.classList.add('left-intro')
 main_content.appendChild(left_content);
+
+const intro_large = document.createElement('p');
+intro_large.textContent = 'Jing Wei - A Tech All-rounder';
+left_content.appendChild(intro_large);
+
+const intro_mid = document.createElement('p');
+intro_mid.textContent = 'PhD Candidate @ University of Melbourne';
+left_content.appendChild(intro_mid);
+
+const intro_small = document.createElement('p');
+intro_small.textContent = "Over the past 7 years, my research has focused on areas such as wearable technology, contactless sensing, voice assistants, and most recently - ChatGPT. With a diverse skill set in software, hardware, and data analysis, I am dedicated to designing intuitive and user-friendly solutions that enhance the way we interact with technology.";
+left_content.appendChild(intro_small);
+
+const download_cv = document.createElement('button');
+download_cv.textContent = 'Download my CV';
+left_content.appendChild(download_cv);
+
+content.appendChild(main_content);
+
+
 
