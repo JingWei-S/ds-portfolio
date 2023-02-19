@@ -67,7 +67,7 @@ const main_content = document.createElement('div');
 main_content.classList.add('main-content');  // will be set as flex box
 
 const left_content = document.createElement('div');
-left_content.classList.add('left-intro')
+left_content.classList.add('left-intro');
 main_content.appendChild(left_content);
 
 const intro_large = document.createElement('p');
@@ -87,6 +87,30 @@ download_cv.textContent = 'Download my CV';
 left_content.appendChild(download_cv);
 
 content.appendChild(main_content);
+
+// the right image part
+const right_content = document.createElement('div');
+right_content.classList.add('right-img');
+main_content.appendChild(right_content);
+
+const image_src = ['./images/chatbot.png', './images/speaker.png', './images/delay.png',
+                    './images/wearable.png', './images/respiration.png', './images/web.png'];
+const image_project = ['GPT-3 Chatbot', 'Proactive Smart Speaker', 'Speaker Network Delay Analysis',
+                    'Sleep Monitoring Through Wearable', 'Wireless Respiration Tracking', 'Web Development Projects'];
+
+for (let i = 0; i < 6; i++) {
+    const img_container = document.createElement('div');
+    const img_display = document.createElement('img');
+    img_display.src = image_src[i];
+    const overlay = document.createElement('div');
+    const img_desp = document.createElement('p');
+    img_desp.textContent = image_project[i];
+    overlay.appendChild(img_desp);
+    overlay.classList.add('overlay');
+    img_container.appendChild(img_display);
+    img_container.appendChild(overlay);
+    right_content.appendChild(img_container);
+}
 
 
 
