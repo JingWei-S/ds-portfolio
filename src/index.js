@@ -1,10 +1,10 @@
 // get the content element
-const content = document.querySelector('.content');
+const header = document.querySelector('.header');
 
 // create the top navigation bar
 const top_nav = document.createElement('div');
 top_nav.classList.add('top-nav');
-content.appendChild(top_nav);
+header.appendChild(top_nav);
 
 // icon?
 const icon = document.createElement('p');
@@ -29,7 +29,7 @@ top_nav_button_groups.appendChild(btn_contact);
 
 top_nav.appendChild(top_nav_button_groups);
 // add the nav bar to the main content
-content.appendChild(top_nav);
+header.appendChild(top_nav);
 
 const sec_nav = document.createElement('div');
 sec_nav.classList.add('sec-nav');
@@ -60,15 +60,14 @@ sec_nav_button_groups.appendChild(btn_misc);
 
 sec_nav.appendChild(sec_nav_button_groups);
 // add the nav bar to the main content
-content.appendChild(sec_nav);
+header.appendChild(sec_nav);
 
 // add a main content
-const main_content = document.createElement('div');
-main_content.classList.add('main-content');  // will be set as flex box
+const content = document.querySelector('.content');
 
 const left_content = document.createElement('div');
 left_content.classList.add('left-intro');
-main_content.appendChild(left_content);
+content.appendChild(left_content);
 
 const intro_large = document.createElement('p');
 intro_large.textContent = 'Jing Wei - A Tech All-rounder';
@@ -87,15 +86,15 @@ download_cv.textContent = 'Download my CV';
 left_content.appendChild(download_cv);
 
 download_cv.addEventListener('click', () => {
-    window.location.href = './images/speaker_vis.png';
+    window.location.href = './info/Resume.pdf';
 })
 
-content.appendChild(main_content);
+// body.appendChild(content);
 
 // the right image part
 const right_content = document.createElement('div');
 right_content.classList.add('right-img');
-main_content.appendChild(right_content);
+content.appendChild(right_content);
 
 const image_src = ['./images/chatbot.png', './images/speaker.png', './images/delay.png',
                     './images/wearable.png', './images/respiration.png', './images/web.png'];
@@ -117,6 +116,12 @@ for (let i = 0; i < 6; i++) {
 }
 
 
+
+
+
+/*********data board*/
+// const data_board = document.querySelector('')
+
 const footer = document.querySelector('.footer');
 
 const footer_icon = ['./images/github.svg', './images/linkedin.svg', './images/school.svg', './images/twitter.svg'];
@@ -130,5 +135,3 @@ for (let i = 0; i < 4; i++) {
     icon_a.appendChild(icon_logo);
     footer.appendChild(icon_a);
 }
-
-
