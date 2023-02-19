@@ -86,6 +86,10 @@ const download_cv = document.createElement('button');
 download_cv.textContent = 'Download my CV';
 left_content.appendChild(download_cv);
 
+download_cv.addEventListener('click', () => {
+    window.location.href = './images/speaker_vis.png';
+})
+
 content.appendChild(main_content);
 
 // the right image part
@@ -112,5 +116,19 @@ for (let i = 0; i < 6; i++) {
     right_content.appendChild(img_container);
 }
 
+
+const footer = document.querySelector('.footer');
+
+const footer_icon = ['./images/github.svg', './images/linkedin.svg', './images/school.svg', './images/twitter.svg'];
+const footer_url = ['https://github.com/JingWei-S', 'https://www.linkedin.com/in/jing-wei-3a846b13b/', 'https://scholar.google.com.au/citations?user=z45wQDYAAAAJ&hl=en', 'https://twitter.com/JingggWei'];
+
+for (let i = 0; i < 4; i++) {
+    const icon_a = document.createElement('a');
+    icon_a.href = footer_url[i];
+    const icon_logo = document.createElement('img');
+    icon_logo.src = footer_icon[i];
+    icon_a.appendChild(icon_logo);
+    footer.appendChild(icon_a);
+}
 
 
